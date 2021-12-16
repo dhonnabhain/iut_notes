@@ -17,7 +17,7 @@ export default function ShowGroupResult({ group }) {
         </h1>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-3 gap-4">
         {notes.map((note) => {
           return <Student student={note} group={group} key={note.Nom} />
         })}
