@@ -14,7 +14,7 @@ export default function Question({ question }) {
               </div>
               <div className="mt-2 flex">
                 <div className="flex items-center text-sm text-gray-500">
-                  <time datetime={question.date}>Le {question.date}</time>
+                  <time>Le {question.date}</time>
                 </div>
               </div>
             </div>
