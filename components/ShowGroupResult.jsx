@@ -1,12 +1,17 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Loader from './Loader'
 import Student from './Student'
 
 export default function ShowGroupResult({ group }) {
   const [notes, setNotes] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    axios.get(`/api/group/${group}`).then((res) => setNotes(res.data))
+    axios.get(`/api/group/${group}`).then((res) => {
+      setNotes(res.data)
+      setIsLoading(false)
+    })
   }, [])
 
   return (
@@ -17,11 +22,14 @@ export default function ShowGroupResult({ group }) {
         </h1>
       </div>
 
-      <div className="grid sm:grid-cols-3 gap-4">
-        {notes.map((note) => {
-          return <Student student={note} group={group} key={note.Nom} />
-        })}
-      </div>
+      {isLoading && <Loader />}
+      {!isLoading && (
+        <div className="grid sm:grid-cols-3 gap-4">
+          {notes.map((note) => {
+            return <Student student={note} group={group} key={note.Nom} />
+          })}
+        </div>
+      )}
     </div>
   )
 }
