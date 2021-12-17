@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Question from '../../components/Question'
 import Head from 'next/head'
+import Loader from '../../components/Loader'
 
 function reducer(src, item) {
   return src.reduce((prev, curr) => {
@@ -18,6 +19,7 @@ export default function StudentPage() {
   const [notes, setNotes] = useState([])
   const [student] = useState(query.student)
   const [sum, setSum] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     axios
@@ -26,6 +28,7 @@ export default function StudentPage() {
         if (Object.keys(query).length > 0) {
           setNotes(res.data)
           setSum(reducer(res.data, 'note'))
+          setIsLoading(false)
         }
       })
   }, [query])
@@ -37,7 +40,7 @@ export default function StudentPage() {
         <meta name="description" content={`PHP notes pour ${student}`} />
       </Head>
 
-      <main>
+      <main className="bg-gray-100">
         <div className="py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex space-x-7">
             <Link href="/">
@@ -53,17 +56,21 @@ export default function StudentPage() {
             </p>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <div className="py-4">
-              <div className="bg-white shadow overflow-hidden sm:rounded-md">
-                <ul role="list" className="divide-y divide-gray-200">
-                  {notes.map((note) => (
-                    <Question question={note} key="note.question" />
-                  ))}
-                </ul>
+          {isLoading && <Loader />}
+
+          {!isLoading && (
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+              <div className="py-4">
+                <div className="bg-white shadow overflow-hidden sm:rounded-md">
+                  <ul role="list" className="divide-y divide-gray-200">
+                    {notes.map((note) => (
+                      <Question question={note} key="note.question" />
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </main>
     </div>

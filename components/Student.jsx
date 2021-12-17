@@ -27,7 +27,7 @@ export default function Student({ student, group }) {
 
   return (
     <Link href={path}>
-      <div className="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200 hover:shadow-xl transition duration-100 cursor-pointer">
+      <div className="col-span-1 bg-white rounded-lg shadow hover:shadow-gray-500/50 divide-y divide-gray-200 hover:shadow-xl transition duration-100 cursor-pointer">
         <div className="w-full p-6 space-y-8">
           <div className="text-center space-y-1">
             <h4 className="text-gray-800 text-3xl font-bold truncate tracking-wide">
