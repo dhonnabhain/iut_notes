@@ -51,7 +51,8 @@ export default function StudentPage() {
               {student}
             </h1>
             <p className="text-2xl self-center">
-              <span className="text-indigo-500 font-black">{sum}</span> / {scale}
+              <span className="text-indigo-500 font-black">{sum}</span> /{' '}
+              {scale}
             </p>
           </div>
 
