@@ -21,7 +21,7 @@ export default function StudentPage() {
   }, [query])
 
   return (
-    <div>
+    <div className="relative">
       <Head>
         <title>PHP | {student}</title>
         <meta name="description" content={`PHP notes pour ${student}`} />

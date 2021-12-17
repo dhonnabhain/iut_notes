@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Github from '../components/Github'
 import ShowGroupResult from '../components/ShowGroupResult'
 
 export default function Home() {
@@ -10,10 +11,12 @@ export default function Home() {
       </Head>
 
       <main className="bg-gray-100">
-        <div className="pb-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="py-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 space-y-16">
             <ShowGroupResult group="y1" />
             <ShowGroupResult group="y2" />
+
+            <Github />
           </div>
         </div>
       </main>
