@@ -12,9 +12,12 @@ export default function Question({ question }) {
                   {question.question}
                 </p>
               </div>
-              <div className="mt-2 flex">
+              <div className="mt-2">
                 <div className="flex items-center text-sm text-gray-500">
                   <time>Le {question.date}</time>
+                </div>
+                <div className="flex items-center text-sm text-gray-500 font-semibold mt-5">
+                  <div className='overflow-scroll'>Réponse: {question.answer}</div>
                 </div>
               </div>
             </div>
