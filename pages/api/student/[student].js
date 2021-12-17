@@ -25,6 +25,9 @@ const scale = {
   // Y2
   'Comment reconnait-on une variable PHP ?': { scale: 1, date: '26/11/21' },
   'Quelle différence entre post et get ?': { scale: 3, date: '03/12/21' },
+  'Ecrire un formulaire contenant une liste déroulante avec les deux format jpg et png, avec png présélectionné.':
+    { scale: 3, date: '17/12/21' },
+  'D’où interroger un fichier php ?': { scale: 1, date: '17/12/21' },
 
   // T
   'Quel est l’intérêt du session_start() ?': { scale: 3, date: '12/11/21' },

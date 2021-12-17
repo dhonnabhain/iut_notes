@@ -20,8 +20,10 @@ export default function Question({ question }) {
             </div>
           </div>
           <div className="ml-5 flex-shrink-0 text-2xl">
-            <span className="text-indigo-500 font-bold">{question.note}</span> /{' '}
-            <span className="text-gray-800 text-xl">{question.scale}</span>
+            <span className="text-indigo-500 font-bold">
+              {question.note === '' ? 'nc' : question.note}
+            </span>{' '}
+            / <span className="text-gray-800 text-xl">{question.scale}</span>
           </div>
         </div>
       </div>
