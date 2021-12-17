@@ -5,10 +5,20 @@ import React, { useEffect, useState } from 'react'
 import Question from '../../components/Question'
 import Head from 'next/head'
 
+function reducer(src, item) {
+  return src.reduce((prev, curr) => {
+    const parsed = parseInt(curr[item])
+
+    return isNaN(parsed) ? prev : prev + parsed
+  }, 0)
+}
+
 export default function StudentPage() {
   const { query } = useRouter()
   const [notes, setNotes] = useState([])
   const [student] = useState(query.student)
+  const [sum, setSum] = useState(0)
+  const [scale, setScale] = useState(0)
 
   useEffect(() => {
     axios
@@ -16,6 +26,8 @@ export default function StudentPage() {
       .then((res) => {
         if (Object.keys(query).length > 0) {
           setNotes(res.data)
+          setSum(reducer(res.data, 'note'))
+          setScale(reducer(res.data, 'scale'))
         }
       })
   }, [query])
@@ -35,7 +47,12 @@ export default function StudentPage() {
                 Retour
               </div>
             </Link>
-            <h1 className="text-2xl font-semibold text-gray-700">{student}</h1>
+            <h1 className="text-2xl font-semibold text-gray-700 self-center">
+              {student}
+            </h1>
+            <p className="text-2xl self-center">
+              <span className="text-indigo-500 font-black">{sum}</span> / {scale}
+            </p>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
