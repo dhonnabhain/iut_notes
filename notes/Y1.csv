@@ -1,16 +1,16 @@
-Nom;Où s’exécute un fichier php ?;Quelle différence entre tableau associatif et indicé ? ;Comment écrit-on un si alors sinon si ?;Lister les 2 variables superglobales qui récupèrent les données des formulaires et comment. ;Un fichier.php doit-il contenir du php ? ;Comment fermer une connexion $bdd à la BDD ? ;"Que se passe-t-il si action="" "" ? ";
-ALVES GONCALVES EVA;2;3;2;1;2;0;2;
-BALAY COLINE;2;3;2;1;2;2;1;
-BEN HADDOU MOUNIR;2;3;2;1;2;2;2;
-CASELLA MARIE-ANGE;2;3;2;3;2;2;2;
-DE ARAUJO CORENTIN;2;3;2;0;2;2;1;
-DESCOMBES MAXENCE;2;2;2;1;2;0;1;
-EL HAMDAOUI AMINE;2;3;2;1;1;1;2;
-HAMMOUTI ILYAS;2;0;2;1;2;2;1;
-HELLER LUCAS;2;1;2;3;2;0;2;
-LEBREC EVAN;2;3;2;1;2;2;2;
-PERDRISET LEO;2;3;2;1;1;2;0;
-PETRINI MATEO;2;3;2;1;2;2;1;
-PINGET DIANE;2;2;2;1;2;2;2;
-SOLA ALEXANDRE;2;2;2;1;2;2;1;
-STAPPERS ADAM;2;3;2;1;2;2;0;
+Nom;Où s’exécute un fichier php ?;Quelle différence entre tableau associatif et indicé ? ;Comment écrit-on un si alors sinon si ?;Lister les 2 variables superglobales qui récupèrent les données des formulaires et comment. ;Un fichier.php doit-il contenir du php ? ;Comment fermer une connexion $bdd à la BDD ? ;"Que se passe-t-il si action="" "" ? ";"Afficher le login de la seconde instance de cette commande : $t=$req->fetchAll();"
+ALVES GONCALVES EVA;2;3;2;1;2;0;2;0
+BALAY COLINE;2;3;2;1;2;2;1;0
+BEN HADDOU MOUNIR;2;3;2;1;2;2;2;0
+CASELLA MARIE-ANGE;2;3;2;3;2;2;2;4
+DE ARAUJO CORENTIN;2;3;2;0;2;2;1;0
+DESCOMBES MAXENCE;2;2;2;1;2;0;1;2
+EL HAMDAOUI AMINE;2;3;2;1;1;1;2;0
+HAMMOUTI ILYAS;2;0;2;1;2;2;1;0
+HELLER LUCAS;2;1;2;3;2;0;2;0
+LEBREC EVAN;2;3;2;1;2;2;2;1
+PERDRISET LEO;2;3;2;1;1;2;0;1
+PETRINI MATEO;2;3;2;1;2;2;1;0
+PINGET DIANE;2;2;2;1;2;2;2;0
+SOLA ALEXANDRE;2;2;2;1;2;2;1;0
+STAPPERS ADAM;2;3;2;1;2;2;0;abs

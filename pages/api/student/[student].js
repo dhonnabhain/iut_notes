@@ -83,6 +83,12 @@ const scale = {
     answer:
       'Une matrice associative avec les numeros de ligne indicés et les colonnes correspondants aux champs de la requête ',
   },
+  'Afficher le login de la seconde instance de cette commande : $t=$req->fetchAll();':
+    {
+      scale: 4,
+      date: '06/01/22',
+      answer: "echo $t[1]['login']",
+    },
 }
 
 export default function handler(req, res) {
