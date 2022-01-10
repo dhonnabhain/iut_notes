@@ -89,6 +89,12 @@ const scale = {
       date: '06/01/22',
       answer: "echo $t[1]['login']",
     },
+
+  'Quels sont les opérateurs logiques et comment les utiliser ?': {
+    scale: 4,
+    date: '10/01/22',
+    answer: '|| = OR, && = AND, if ((x>3) || (x<5))',
+  },
 }
 
 export default function handler(req, res) {
